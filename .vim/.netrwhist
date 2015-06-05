@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/sbrauer/source/m.apartmentguide/config/deploy'
+let g:netrw_dirhist_2='/Users/sbrauer/source/blogerator'
+let g:netrw_dirhist_3='/Users/sbrauer/source/ag/app/routes'
+let g:netrw_dirhist_4='/Users/sbrauer/.rvm/gems/ruby-1.9.3-p327/gems/twilio-ruby-3.6.0/lib/twilio-ruby'
+let g:netrw_dirhist_5='/Users/sbrauer/Dropbox/configs/home/sam/.vim/bundle/vimproc.vim/doc'
+let g:netrw_dirhist_6='/Users/sbrauer/.vim'
+let g:netrw_dirhist_7='/Users/sbrauer/source/rentals/app/assets/stylesheets/themes'
+let g:netrw_dirhist_8='/Users/sbrauer/.rvm/gems/ruby-1.9.3-p327/gems/location_header-0.4.4/lib/location_header'
+let g:netrw_dirhist_9='/Users/sbrauer/source/newhomeguide/app/routes'
