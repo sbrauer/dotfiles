@@ -165,3 +165,7 @@ nnoremap <Leader>g :Ggrep "<C-R><C-W>"<CR>:copen<CR><CR>
 vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" vim-fireplace shortcuts
+nnoremap <C-e> :Eval<CR>
+nnoremap E :%Eval<CR>
