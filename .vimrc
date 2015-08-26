@@ -48,9 +48,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Enable matching for Ruby syntax (with % key).
 runtime macros/matchit.vim
 
-" abbreviations (thanks Zander)
-iabbr _pry require'pry';binding.pry
-iabbr _pryr require'pry-remote';binding.pry_remote
+" abbreviations (thanks Zander); type the abbr pattern followed by ; and it
+" will expand
+iabbr _pry require 'pry'; binding.pry
+iabbr _pryr require 'pry-remote'; binding.pry_remote
+" python-style
+iabbr _pdb import pdb; pdb.set_trace()
 
 " map Backspace key to dismiss search highlights
 noremap <bs> :noh<CR>
