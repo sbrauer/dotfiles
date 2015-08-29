@@ -167,5 +167,4 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " vim-fireplace shortcuts
-nnoremap <C-e> :Eval<CR>
-nnoremap E :%Eval<CR>
+noremap <C-e> :Eval<CR>
