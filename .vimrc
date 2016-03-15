@@ -17,6 +17,9 @@ set showmode
 set showcmd
 set mouse=a   " enable mouse in terminal vim
 
+let mapleader = "\\"
+let maplocalleader = "\\\\"
+
 silent execute '!mkdir -p $HOME/.vim-tmp/backup'
 silent execute '!mkdir -p $HOME/.vim-tmp/swap'
 set backupdir=~/.vim-tmp/backup//
