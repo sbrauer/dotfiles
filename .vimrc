@@ -167,4 +167,5 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " vim-fireplace shortcuts
+" Visually highlight some code then use this shortcut to :Eval it to the repl.
 noremap <C-e> :Eval<CR>
