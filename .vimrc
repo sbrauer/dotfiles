@@ -94,6 +94,8 @@ endfunction
 xmap <Leader>c <Plug>Commentary
 nmap <Leader>c <Plug>Commentary
 
+noremap <Leader>r :RainbowParenthesesToggle<CR>
+
 " Use OSX system clipboard for vim yank, delete, etc. Requires MacVim.
 set clipboard=unnamed
 
