@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<root>
+<item>
+  <name>Command_R to Control Option Command</name>
+  <identifier>private.command_r_to_control_option_command</identifier>
+  <autogen>
+    __KeyToKey__
+    KeyCode::COMMAND_R,
+    KeyCode::COMMAND_L,
+    ModifierFlag::OPTION_L | ModifierFlag::CONTROL_L
+  </autogen>
+</item>
+<item>
+  <name>Option_R to Shift Option Command</name>
+  <identifier>private.command_r_to_shift_option_command</identifier>
+  <autogen>
+    __KeyToKey__
+    KeyCode::OPTION_R,
+    KeyCode::COMMAND_L,
+    ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
+  </autogen>
+</item>
+<item>
+  <name>Option_R to Shift Control Command</name>
+  <identifier>private.command_r_to_shift_control_command</identifier>
+  <autogen>
+    __KeyToKey__
+    KeyCode::OPTION_R,
+    KeyCode::COMMAND_L,
+    ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+  </autogen>
+</item>
+
+<item>
+  <name>Control_L Escape to Control F2 (focus menu bar)</name>
+  <identifier>private.control_l_esc_to_control_f2</identifier>
+  <autogen>
+    __KeyToKey__
+    KeyCode::ESCAPE,
+    ModifierFlag::CONTROL_L,
+    KeyCode::F2,
+    ModifierFlag::CONTROL_L
+  </autogen>
+</item>
+<item>
+  <name>Command_L Escape to Control F2 (focus menu bar)</name>
+  <identifier>private.command_l_esc_to_control_f2</identifier>
+  <autogen>
+    __KeyToKey__
+    KeyCode::ESCAPE,
+    ModifierFlag::COMMAND_L,
+    KeyCode::F2,
+    ModifierFlag::CONTROL_L
+  </autogen>
+</item>
+</root>
