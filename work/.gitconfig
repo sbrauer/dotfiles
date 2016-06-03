@@ -1,0 +1,15 @@
+# Note: I made this file read-only to prevent
+# surprise updates (like by idg).
+[color]
+	ui = true
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = 1
+[user]
+	name = Sam Brauer
+	email = sbrauer@rentpath.com
+[init]
+  templatedir = ~/.git_template
