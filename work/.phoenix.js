@@ -293,9 +293,9 @@ api.bind('m', MASH, function() { App.focusOrStart('Mailplane 3'); });
 // api.bind('p', MASH, function() { App.focusOrStart('Propane'); });
 api.bind('p', MASH, function() { App.focusOrStart('Password Gorilla'); });
 // api.bind('r', MASH, function() { App.focusOrStart('Rdio'); });
-api.bind('s', MASH, function() { App.focusOrStart('Sococo 2'); });
+api.bind('s', MASH, function() { App.focusOrStart('Sococo'); });
 api.bind('s', SUPER, function() { App.focusOrStart('Safari'); });
 api.bind('s', SMASH, function() { App.focusOrStart('Spotify'); });
-api.bind('t', MASH, function() { App.focusOrStart('iTerm'); });
+api.bind('t', MASH, function() { App.focusOrStart('iTerm 2'); });
 api.bind('v', MASH, function() { App.focusOrStart('VLC'); });
 
