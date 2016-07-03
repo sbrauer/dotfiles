@@ -73,3 +73,6 @@
 
 ;; Taken from  https://www.emacswiki.org/emacs/ToggleWindowSplit
 (load "ui/toggle-window-split.el")
+
+;; Enable which-key
+(which-key-mode)
