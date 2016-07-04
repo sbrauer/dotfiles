@@ -63,10 +63,16 @@
     ;; git integration
     magit
 
-    ;; Sam's got to have it
+    ;; Sam likes solarized-dark
     solarized-theme
+
+    ;; the silver searcher
     ag
-    which-key))
+
+    ;; after entering a prefix key (like C-x), list possible options
+    which-key
+
+    ido-vertical-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
