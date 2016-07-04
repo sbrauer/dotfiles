@@ -71,8 +71,11 @@
 ;; no bell
 (setq ring-bell-function 'ignore)
 
-;; Taken from  https://www.emacswiki.org/emacs/ToggleWindowSplit
-(load "ui/toggle-window-split.el")
-
 ;; Enable which-key
 (which-key-mode)
+
+;; Taken from https://www.emacswiki.org/emacs/ToggleWindowSplit
+(load "ui/toggle-window-split.el")
+
+;; Taken from https://www.emacswiki.org/emacs/TransposeWindows
+(load "ui/transpose-windows.el")
