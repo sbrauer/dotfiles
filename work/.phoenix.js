@@ -170,7 +170,7 @@ App.focusOrStart = function (title) {
   savedTitle = title;
 
   if (apps.isEmpty()) {
-    api.alert("> Starting " + title + " ...");
+    //api.alert("> Starting " + title + " ...");
     api.launch(title);
     return;
   }
