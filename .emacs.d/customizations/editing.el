@@ -66,4 +66,5 @@
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
 
-(setq electric-indent-mode nil)
+; Why was this being disabled? Seems pretty handy/sane.
+;(setq electric-indent-mode nil)
