@@ -283,6 +283,7 @@ api.bind('0', MASH, centerWindow);
 
 // Apps for work
 api.bind('c', MASH, function() { App.focusOrStart('Calculator'); });
+api.bind('e', MASH, function() { App.focusOrStart('Emacs'); });
 api.bind('f', MASH, function() { App.focusOrStart('Finder'); });
 api.bind('f', SUPER, function() { App.focusOrStart('Firefox'); });
 api.bind('g', MASH, function() { App.focusOrStart('Google Chrome'); });
