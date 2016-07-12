@@ -72,6 +72,8 @@
     ;; after entering a prefix key (like C-x), list possible options
     which-key
 
+    highlight-symbol
+
     ido-vertical-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
