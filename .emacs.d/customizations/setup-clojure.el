@@ -33,7 +33,6 @@
 ;;;;
 
 ;; provides minibuffer documentation for the code you're typing into the repl
-;(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-mode-hook 'turn-on-eldoc-mode)
 
 ;; go right to the REPL buffer when it's finished connecting
