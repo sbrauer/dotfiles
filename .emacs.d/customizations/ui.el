@@ -30,6 +30,9 @@
 ;; Sam wants solarized, dammit!
 (load-theme 'solarized-dark t)
 
+;; Set cursor to solarized red
+(set-cursor-color "#dc322f")
+
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
 
