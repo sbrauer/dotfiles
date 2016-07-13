@@ -174,7 +174,7 @@ App.focusOrStart = function (title) {
   savedTitle = title;
 
   if (apps.isEmpty()) {
-    api.alert(appStartupMessage(title));
+    //api.alert(appStartupMessage(title));
     api.launch(title);
     return;
   }
@@ -289,6 +289,7 @@ api.bind('8', MASH, rightOneThird);
 api.bind('0', MASH, centerWindow);
 
 api.bind('c', MASH, function() { App.focusOrStart('Calculator'); });
+api.bind('e', MASH, function() { App.focusOrStart('Emacs'); });
 api.bind('f', MASH, function() { App.focusOrStart('Finder'); });
 api.bind('g', MASH, function() { App.focusOrStart('Google Chrome'); });
 api.bind('i', MASH, function() { App.focusOrStart('iTunes'); });
