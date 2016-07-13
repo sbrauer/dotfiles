@@ -69,5 +69,8 @@
 ; Why was this being disabled? Seems pretty handy/sane.
 ;(setq electric-indent-mode nil)
 
-;; Enable M-n and M-p to nav to next/prev occurrence of symbol under point.
-(add-hook 'prog-mode-hook  (lambda  ()  (highlight-symbol-nav-mode)))
+(add-hook 'prog-mode-hook (lambda ()
+  ;; Enable M-n and M-p to nav to next/prev occurrence of symbol under point.
+                            (highlight-symbol-nav-mode)
+  ;; Enable highlight of symbol under point.
+                            (highlight-symbol-mode)))
