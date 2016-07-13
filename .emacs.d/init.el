@@ -72,9 +72,14 @@
     ;; after entering a prefix key (like C-x), list possible options
     which-key
 
+    ;; allows highlighting of and nav to other instances of the symbol at point
     highlight-symbol
 
-    ido-vertical-mode))
+    ;; easier to read ido options vertically than default horizontal
+    ido-vertical-mode
+
+    ;; move buffers around in adjacent windows
+    buffer-move))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
