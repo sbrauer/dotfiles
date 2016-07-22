@@ -33,6 +33,9 @@
 ;; Set cursor to solarized red
 (set-cursor-color "#dc322f")
 
+;; Override default "box" cursor
+(setq-default cursor-type 'bar)
+
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
 
@@ -64,6 +67,9 @@
 ;; No cursor blinking, it's distracting
 ; (blink-cursor-mode 0)
 (blink-cursor-mode 1)
+
+;; Blink cursor forever (defaults to 10 blinks)
+(setq blink-cursor-blinks 0)
 
 ;; full path in title bar
 (setq-default frame-title-format "%b (%f)")
