@@ -18,12 +18,18 @@
 ;; Highlight current line
 (global-hl-line-mode 1)
 
+;; Show trailing whitespace
+;;(setq-default show-trailing-whitespace t)
+
+;; Remove trailing whitespace when saving
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; Interactive search key bindings. By default, C-s runs
 ;; isearch-forward, so this swaps the bindings.
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-(global-set-key (kbd "C-r") 'isearch-backward-regexp)
-(global-set-key (kbd "C-M-s") 'isearch-forward)
-(global-set-key (kbd "C-M-r") 'isearch-backward)
+;; (global-set-key (kbd "C-s") 'isearch-forward-regexp)
+;; (global-set-key (kbd "C-r") 'isearch-backward-regexp)
+;; (global-set-key (kbd "C-M-s") 'isearch-forward)
+;; (global-set-key (kbd "C-M-r") 'isearch-backward)
 
 ;; Don't use hard tabs
 (setq-default indent-tabs-mode nil)
@@ -73,4 +79,5 @@
   ;; Enable M-n and M-p to nav to next/prev occurrence of symbol under point.
                             (highlight-symbol-nav-mode)
   ;; Enable highlight of symbol under point.
-                            (highlight-symbol-mode)))
+                            ;; (highlight-symbol-mode)
+                           ))
