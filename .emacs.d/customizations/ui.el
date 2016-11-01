@@ -95,3 +95,7 @@
 (global-set-key (kbd "<C-S-down>")   'buf-move-down)
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+;; Enable Wind Move (Shift and arrow keys to move point between "windows")
+(when (fboundp 'windmove-default-keybindings)
+   (windmove-default-keybindings))

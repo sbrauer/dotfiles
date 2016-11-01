@@ -33,10 +33,12 @@
 ;;;;
 
 ;; provides minibuffer documentation for the code you're typing into the repl
-(add-hook 'cider-mode-hook 'turn-on-eldoc-mode)
+;; (add-hook 'cider-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook #'eldoc-mode)
 
 ;; go right to the REPL buffer when it's finished connecting
-(setq cider-repl-pop-to-buffer-on-connect t)
+; (setq cider-repl-pop-to-buffer-on-connect t)
+(setq cider-repl-pop-to-buffer-on-connect nil)
 
 ;; When there's a cider error, show its buffer and switch to it
 (setq cider-show-error-buffer t)
@@ -46,7 +48,7 @@
 (setq cider-repl-history-file "~/.emacs.d/cider-history")
 
 ;; Wrap when navigating history.
-(setq cider-repl-wrap-history t)
+; (setq cider-repl-wrap-history t)
 
 ;; enable paredit in your REPL
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
@@ -85,3 +87,21 @@
      (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
+
+;;
+;; Setup clj-refactor
+;;
+;; Hack! Without the following require, when I jacked-in I would get:
+;; error in process filter: cljr--create-msg: Symbol’s function definition is void: assert
+(require 'cl-lib)
+
+(require 'clj-refactor)
+
+(defun setup-clj-refactor-hook ()
+    (clj-refactor-mode 1)
+    (setq cljr-warn-on-eval nil)
+    (yas-minor-mode 1) ; for adding require/use/import statements
+    ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+    (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+(add-hook 'clojure-mode-hook #'setup-clj-refactor-hook)

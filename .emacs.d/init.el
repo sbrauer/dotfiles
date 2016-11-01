@@ -4,12 +4,14 @@
 
 ;; Define package repositories
 (require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-             '("tromey" . "http://tromey.com/elpa/") t)
+;;(add-to-list 'package-archives
+;;             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;;(add-to-list 'package-archives
+;;             '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
+;;(add-to-list 'package-archives
+;;             '("melpa-stable" .  "http://melpa-stable.milkbox.net/packages/") t)
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -41,6 +43,8 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
+    clj-refactor
+
     ;; allow ido usage in as many contexts as possible. see
     ;; customizations/navigation.el line 23 for a description
     ;; of ido
@@ -58,7 +62,7 @@
     rainbow-delimiters
 
     ;; edit html tags like sexps
-    tagedit
+    ;;tagedit
 
     ;; git integration
     magit
@@ -105,7 +109,7 @@
 ;;
 ;; (require 'yaml-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;; 
+;;
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
@@ -142,4 +146,4 @@
 
 ;; Language-specific
 (load "setup-clojure.el")
-(load "setup-js.el")
+;;(load "setup-js.el")
