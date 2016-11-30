@@ -10,6 +10,19 @@
 ;; Show line numbers
 (global-linum-mode)
 
+;; Fix margins when font is scaled with C-x C-+ or C-x C--
+;; https://www.emacswiki.org/emacs/LineNumbers#toc14
+(require 'linum)
+(defun linum-update-window-scale-fix (win)
+  "fix linum for scaled text"
+  (set-window-margins win
+                      (ceiling (* (if (boundp 'text-scale-mode-step)
+                                      (expt text-scale-mode-step
+                                            text-scale-mode-amount) 1)
+                                  (if (car (window-margins))
+                                      (car (window-margins)) 1)))))
+(advice-add #'linum-update-window :after #'linum-update-window-scale-fix)
+
 ;; Remove the graphical toolbar at the top. After awhile, you won't need the toolbar.
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
