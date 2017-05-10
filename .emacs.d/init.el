@@ -8,10 +8,10 @@
 ;;             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 ;;(add-to-list 'package-archives
 ;;             '("tromey" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
 ;;(add-to-list 'package-archives
-;;             '("melpa-stable" .  "http://melpa-stable.milkbox.net/packages/") t)
+;;             '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa-stable" .  "http://melpa-stable.milkbox.net/packages/") t)
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -65,7 +65,7 @@
     ;;tagedit
 
     ;; git integration
-    magit
+    ;;magit
 
     ;; Sam likes solarized-dark
     solarized-theme
