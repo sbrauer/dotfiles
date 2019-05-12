@@ -18,7 +18,8 @@ set showcmd
 set mouse=a   " enable mouse in terminal vim
 
 let mapleader = "\\"
-let maplocalleader = "\\\\"
+"let maplocalleader = "\\\\"
+let maplocalleader = "|"
 
 silent execute '!mkdir -p $HOME/.vim-tmp/backup'
 silent execute '!mkdir -p $HOME/.vim-tmp/swap'
@@ -35,6 +36,9 @@ set wildmode=longest:full,full
 " Don't search include files when autocompleting
 " http://stackoverflow.com/a/2460593
 set complete=.,w,b,u,t
+
+" Initially added for vim-gitgutter
+set updatetime=500
 
 syntax on
 filetype plugin on
@@ -144,6 +148,7 @@ colorscheme solarized
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized16_dark_sam'
 
+
 " From "Faster Grepping in Vim"
 " http://robots.thoughtbot.com/faster-grepping-in-vim
 
@@ -164,6 +169,10 @@ nnoremap <Leader>a :grep! "\b<C-R><C-W>\b"<CR>:copen<CR><CR>
 
 " git grep for the word under cursor, and open quickfix
 nnoremap <Leader>g :Ggrep "<C-R><C-W>"<CR>:copen<CR><CR>
+
+" toggle auto-center of the current line (similar to `zz` but always on)
+" http://vim.wikia.com/wiki/Keep_your_cursor_centered_vertically_on_the_screen
+nnoremap <Leader>z :let &scrolloff=999-&scrolloff<CR>
 
 " https://github.com/junegunn/vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)

@@ -4,3 +4,6 @@
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-envs
    '("PATH")))
+
+;; Enable xclip
+(xclip-mode 1)
