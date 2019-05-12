@@ -293,7 +293,7 @@ api.bind('e', MASH, function() { App.focusOrStart('Emacs'); });
 api.bind('f', MASH, function() { App.focusOrStart('Finder'); });
 api.bind('g', MASH, function() { App.focusOrStart('Google Chrome'); });
 api.bind('i', MASH, function() { App.focusOrStart('iTunes'); });
-api.bind('l', MASH, function() { App.focusOrStart('Ableton Live 9 Suite'); });
+api.bind('l', MASH, function() { App.focusOrStart('Ableton Live 10 Suite'); });
 api.bind('m', MASH, function() { App.focusOrStart('Mail'); });
 api.bind('p', MASH, function() { App.focusOrStart('Password Gorilla'); });
 api.bind('r', MASH, function() { App.focusOrStart('Rdio'); });
