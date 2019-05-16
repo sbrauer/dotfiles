@@ -88,20 +88,22 @@
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
 
-;;
-;; Setup clj-refactor
-;;
-;; Hack! Without the following require, when I jacked-in I would get:
-;; error in process filter: cljr--create-msg: Symbol’s function definition is void: assert
-(require 'cl-lib)
-
-(require 'clj-refactor)
-
-(defun setup-clj-refactor-hook ()
-    (clj-refactor-mode 1)
-    (setq cljr-warn-on-eval nil)
-    (yas-minor-mode 1) ; for adding require/use/import statements
-    ;; This choice of keybinding leaves cider-macroexpand-1 unbound
-    (cljr-add-keybindings-with-prefix "C-c C-m"))
-
-(add-hook 'clojure-mode-hook #'setup-clj-refactor-hook)
+;; FIXME: Uncomment in future if clj-refactor seems more stable with cider and listing-service
+;; ;;
+;; ;; Setup clj-refactor
+;; ;;
+;; 
+;; ;; Hack! Without the following require, when I jacked-in I would get:
+;; ;; error in process filter: cljr--create-msg: Symbol’s function definition is void: assert
+;; (require 'cl-lib)
+;; 
+;; (require 'clj-refactor)
+;; 
+;; (defun setup-clj-refactor-hook ()
+;;     (clj-refactor-mode 1)
+;;     (setq cljr-warn-on-eval nil)
+;;     (yas-minor-mode 1) ; for adding require/use/import statements
+;;     ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+;;     (cljr-add-keybindings-with-prefix "C-c C-m"))
+;; 
+;; (add-hook 'clojure-mode-hook #'setup-clj-refactor-hook)

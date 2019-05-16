@@ -44,7 +44,7 @@
 
 ;; This enables ido in all contexts where it could be useful, not just
 ;; for selecting buffer and file names
-(ido-ubiquitous-mode 1)
+;;(ido-ubiquitous-mode 1)
 
 (require 'ido-vertical-mode)
 (ido-vertical-mode 1)
@@ -62,4 +62,7 @@
 (global-set-key (kbd "M-x") 'smex)
 
 ;; projectile everywhere!
-(projectile-global-mode)
+;; FIXME: old; del... (projectile-global-mode)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)

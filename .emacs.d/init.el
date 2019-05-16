@@ -8,6 +8,7 @@
 ;;             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 ;;(add-to-list 'package-archives
 ;;             '("tromey" . "http://tromey.com/elpa/") t)
+
 ;;(add-to-list 'package-archives
 ;;             '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
@@ -43,12 +44,14 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
-    clj-refactor
+    ;; Disabled on the hunch that it's breaking cider (for listing-service)
+    ;; clj-refactor
 
     ;; allow ido usage in as many contexts as possible. see
     ;; customizations/navigation.el line 23 for a description
     ;; of ido
-    ido-ubiquitous
+    ;; FIXME: del this?
+    ;; ido-ubiquitous
 
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
@@ -150,3 +153,6 @@
 ;; Language-specific
 (load "setup-clojure.el")
 ;;(load "setup-js.el")
+
+;; Org-mode
+(load "org-mode.el")
