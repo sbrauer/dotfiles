@@ -81,3 +81,7 @@
   ;; Enable highlight of symbol under point.
                             ;; (highlight-symbol-mode)
                            ))
+
+; Enable company-mode (auto completion; goofy name stands for "COMPlete ANYthing")
+(global-company-mode)
+; See https://cider.readthedocs.io/en/latest/code_completion/

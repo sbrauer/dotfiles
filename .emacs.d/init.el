@@ -89,7 +89,11 @@
     buffer-move
 
     ;; Integrate terminal-mode Emacs with system clipboard.
-    xclip))
+    xclip
+
+    ;; Complete Anything (code completion)
+    company
+))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
