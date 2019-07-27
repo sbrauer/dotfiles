@@ -145,8 +145,9 @@ set background=dark
 "let g:solarized_contrast="normal"
 colorscheme solarized
 
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_colorscheme = 'solarized16_dark_sam'
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
 
 
 " From "Faster Grepping in Vim"
