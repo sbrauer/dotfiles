@@ -1,10 +1,9 @@
-local pushToTalk = require("pushToTalk")
-pushToTalk.init{"fn", "ctrl"}
+-- local pushToTalk = require("pushToTalk")
+-- pushToTalk.init{"fn", "ctrl"}
 
 local modifierKeys = {"cmd", "alt", "ctrl"}
 
 -- FIXME: Consider refactoring for DRYness
--- FIXME: Add hotkeys for moving window to next/prev display/monitor
 
 --
 -- Window mgmt
@@ -34,6 +33,13 @@ hs.hotkey.bind(modifierKeys, "Right", function()
   f.h = max.h
   win:setFrame(f)
 end)
+
+-- Use a spoon to move windows between displays
+hs.loadSpoon("WindowScreenLeftAndRight")
+spoon.WindowScreenLeftAndRight:bindHotkeys({
+  screen_right= { modifierKeys, "Up" },
+  screen_left = { modifierKeys, "Down" }
+})
 
 -- Upper left quadrant
 hs.hotkey.bind(modifierKeys, "1", function()
@@ -91,6 +97,38 @@ hs.hotkey.bind(modifierKeys, "4", function()
   win:setFrame(f)
 end)
 
+-- 2/3 width left-side
+hs.hotkey.bind(modifierKeys, "5", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  local w = max.w * 2 / 3
+
+  f.x = max.x
+  f.y = max.y
+  f.w = w
+  f.h = max.h
+  win:setFrame(f)
+end)
+
+-- 2/3 width right-side
+hs.hotkey.bind(modifierKeys, "6", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  local w = max.w * 2 / 3
+
+  f.x = max.x + (max.w - w)
+  f.y = max.y
+  f.w = w
+  f.h = max.h
+  win:setFrame(f)
+end)
+
 -- Maximize
 hs.hotkey.bind(modifierKeys, "Return", function()
   local win = hs.window.focusedWindow()
@@ -124,7 +162,7 @@ hs.hotkey.bind(modifierKeys, "K", function()
   hs.application.launchOrFocus("Slack")
 end)
 hs.hotkey.bind(modifierKeys, "M", function()
-  hs.application.launchOrFocus("Mailplane 3")
+  hs.application.launchOrFocus("Mail")
 end)
 hs.hotkey.bind(modifierKeys, "P", function()
   hs.application.launchOrFocus("Password Gorilla")
@@ -133,7 +171,7 @@ hs.hotkey.bind(modifierKeys, "S", function()
   hs.application.launchOrFocus("Safari")
 end)
 hs.hotkey.bind(modifierKeys, "T", function()
-  hs.application.launchOrFocus("iTerm 2")
+  hs.application.launchOrFocus("iTerm")
 end)
 hs.hotkey.bind(modifierKeys, "V", function()
   hs.application.launchOrFocus("VLC")
