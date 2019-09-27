@@ -83,5 +83,7 @@
                            ))
 
 ; Enable company-mode (auto completion; goofy name stands for "COMPlete ANYthing")
-(global-company-mode)
 ; See https://cider.readthedocs.io/en/latest/code_completion/
+(global-company-mode)
+(setq company-idle-delay nil) ; never start completions automatically
+(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
