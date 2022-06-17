@@ -9,10 +9,10 @@
 ;;(add-to-list 'package-archives
 ;;             '("tromey" . "http://tromey.com/elpa/") t)
 
-;;(add-to-list 'package-archives
-;;             '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
-             '("melpa-stable" .  "http://melpa-stable.milkbox.net/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
+;;(add-to-list 'package-archives
+;;             '("melpa-stable" .  "https://stable.melpa.org/packages/") t)
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
